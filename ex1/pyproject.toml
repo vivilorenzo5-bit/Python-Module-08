@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "the-matrix-data-eng"
 version = "1.0.0"
-description = "Vicente Data Engineering - Package and Environment Management"
+description = "Zion Data Engineering - Package and Environment Management"
 authors = ["Vicente von Bonhorst vivilourenzo5@gmail.com"]
 package-mode = false
 
