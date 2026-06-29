@@ -21,7 +21,7 @@ def check_environment_security() -> None:
     if os.environ.get("MATRIX_MODE") == "production":
         print("[OK] Production overrides avaliable")
     else:
-        print("[INFO] Not running in production mode")
+        print("[INFO] Running in development mode")
 
 
 def main() -> None:
@@ -45,4 +45,26 @@ def main() -> None:
     db_url = os.environ.get("DATABASE_URL", "")
     api_key = os.environ.get("API_KEY", "")
     log_level = os.environ.get("LOG_LEVEL", "INFO")
-    zion = os.environ.get("ZION_ENDPOINT")
+    zion = os.environ.get("ZION_ENDPOINT", "")
+
+    print("Configuration loaded:")
+    print(f"Mode: {mode}")
+
+    if mode == "production":
+        print("Database: Connected to PRODUCTION Mainframe Cluster SSL Active")
+        print(f"API Access: Authenticated ({api_key[:4]}***{api_key[-4:]})")
+        print(f"Log Level: {log_level}")
+        print(f"Zion Network: SECURE TUNNER TO {zion}")
+    else:
+        print(f"Database: Connected to local instance ({db_url})")
+        print(f"API Access: Authenticated (Dev Mode Key: {api_key})")
+        print(f"Log Level: {log_level}")
+        print(f"Zion Network: Online ({zion})\n")
+
+    check_environment_security()
+    print()
+    print("The Oracle sees all configurations.")
+
+
+if __name__ == "__main__":
+    main()
