@@ -19,13 +19,13 @@ def check_environment_security() -> None:
         print("[WARN] .env file not found (using system env vars)")
 
     if os.environ.get("MATRIX_MODE") == "production":
-        print("[OK] Production overrides avaliable")
+        print("[OK] Production overrides available")
     else:
         print("[INFO] Running in development mode")
 
 
 def main() -> None:
-    print("ORACLE STATUS: Reading the Matrix...:\n")
+    print("ORACLE STATUS: Reading the Matrix...\n")
 
     required_vars = [
         "MATRIX_MODE",
@@ -54,7 +54,7 @@ def main() -> None:
         print("Database: Connected to PRODUCTION Mainframe Cluster SSL Active")
         print(f"API Access: Authenticated ({api_key[:4]}***{api_key[-4:]})")
         print(f"Log Level: {log_level}")
-        print(f"Zion Network: SECURE TUNNER TO {zion}")
+        print(f"Zion Network: SECURE TUNNEL TO {zion}")
     else:
         print(f"Database: Connected to local instance ({db_url})")
         print(f"API Access: Authenticated (Dev Mode Key: {api_key})")
