@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "the-matrix-data-eng"
 version = "1.0.0"
-description = "Zion Data Engineering - Package and Environment Management"
+description = "Vicente Data Engineering - Package and Environment Management"
 authors = ["Vicente von Bonhorst vivilourenzo5@gmail.com"]
-readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
